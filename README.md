@@ -75,82 +75,81 @@ While the attack vector executes flawlessly inside an isolated debugger boundary
 Below is the step-by-step visual documentation mapping the real-time physical execution profile extracted during the debugging process.
 
 ### Step 1: Writing the Assembly Source Code
-![Step 1](<img width="1680" height="1050" alt="1" src="https://github.com/user-attachments/assets/12c26224-82aa-429a-bfaf-21413f9db14c" />
-)
+<img width="1680" height="1050" alt="1" src="https://github.com/user-attachments/assets/12c26224-82aa-429a-bfaf-21413f9db14c" />
+
 *Writing the initial assembly logic.*
 
 ### Step 2: Navigating Project Workspace Directory
-![Step 2](<img width="1680" height="1020" alt="2" src="https://github.com/user-attachments/assets/49d2fc99-e41e-4d8a-bb8d-73f69f93a6fa" />
-)
+<img width="1680" height="1020" alt="2" src="https://github.com/user-attachments/assets/49d2fc99-e41e-4d8a-bb8d-73f69f93a6fa" />
+
 *Locating the source files.*
 
 ### Step 3: Verification of Object Binary Compilation
-![Step 3](<img width="1680" height="1020" alt="3" src="https://github.com/user-attachments/assets/ece20239-3c43-43bc-90fc-c26f3ea2a2f2" />
-)
+<img width="1680" height="1020" alt="3" src="https://github.com/user-attachments/assets/ece20239-3c43-43bc-90fc-c26f3ea2a2f2" />
+
 *Compiling using NASM tool.*
 
 ### Step 4: Linking Object to Standalone Executable
-![Step 4](<img width="1680" height="1020" alt="4" src="https://github.com/user-attachments/assets/31b0a216-048b-442d-a08d-239a4fce63fe" />
-)
+<img width="1680" height="1020" alt="4" src="https://github.com/user-attachments/assets/31b0a216-048b-442d-a08d-239a4fce63fe" />
+
 *Generating executable using GCC tool.*
 
 ### Step 5: Loading Binary inside x32dbg Debugger
-![Step 5](<img width="1680" height="1020" alt="4" src="https://github.com/user-attachments/assets/c951328b-5365-4add-afc1-da4a2f5535db" />
-)
+<img width="1680" height="1020" alt="5" src="https://github.com/user-attachments/assets/c951328b-5365-4add-afc1-da4a2f5535db" />
+
 *Opening the program for analysis.*
 
 ### Step 6: Analyzing Thread Entry Breakpoint State
-![Step 6](<img width="1680" height="1020" alt="6" src="https://github.com/user-attachments/assets/9954c027-1935-458a-85cf-57ad779e2e3d" />
-)
+<img width="1680" height="1020" alt="6" src="https://github.com/user-attachments/assets/9954c027-1935-458a-85cf-57ad779e2e3d" />
+
 *Debugger loading standard library modules.*
 
 ### Step 7: Checking Preliminary Processor Register Matrix
-![Step 7](<img width="1680" height="1020" alt="7" src="https://github.com/user-attachments/assets/beec6731-8830-4519-9b98-ab838218b36f" />
-)
+<img width="1680" height="1020" alt="7" src="https://github.com/user-attachments/assets/beec6731-8830-4519-9b98-ab838218b36f" />
+
 *Inspecting registers layout before modification.*
 
 ### Step 8: Verifying Thread Call Stack Boundaries
-![Step 8](<img width="1680" height="1020" alt="8" src="https://github.com/user-attachments/assets/bd67fbfc-9b44-4515-98b6-961771629225" />
-)
+<img width="1680" height="1020" alt="8" src="https://github.com/user-attachments/assets/bd67fbfc-9b44-4515-98b6-961771629225" />
+
 *Monitoring memory stack framework initialization.*
 
 ### Step 9: Mapping Binary Export Symbols Table
-![Step 9](<img width="1680" height="892" alt="9" src="https://github.com/user-attachments/assets/c9abee98-dd83-4d0b-becc-1b09cccd6f16" />
-)
+<img width="1680" height="892" alt="9" src="https://github.com/user-attachments/assets/c9abee98-dd83-4d0b-becc-1b09cccd6f16" />
+
 *Extracting module execution entry addresses.*
 
 ### Step 10: Identifying Application Entry Point Address
-![Step 10](<img width="1680" height="892" alt="10" src="https://github.com/user-attachments/assets/05517bf3-2c18-4160-8413-e458449e8e48" />
-)
+<img width="1680" height="892" alt="10" src="https://github.com/user-attachments/assets/05517bf3-2c18-4160-8413-e458449e8e48" />
+
 *Pinpointing core program target code.*
 
 ### Step 11: Jumping to Assembly Injected Code
-![Step 11](<img width="1680" height="1020" alt="11" src="https://github.com/user-attachments/assets/4ecf4a3b-ab71-4875-a7b2-7791bd81253d" />
-)
+<img width="1680" height="1020" alt="11" src="https://github.com/user-attachments/assets/4ecf4a3b-ab71-4875-a7b2-7791bd81253d" />
+
 *Navigating to base memory instruction.*
 
 ### Step 12: Locating Injected Instructions in Memory
-![Step 12](<img width="1680" height="1020" alt="12" src="https://github.com/user-attachments/assets/267cae69-197b-4b0d-af7c-cebac3d06e26" />
-)
+<img width="1680" height="1020" alt="12" src="https://github.com/user-attachments/assets/267cae69-197b-4b0d-af7c-cebac3d06e26" />
+
 *Inspecting raw code layout.*
 
 ### Step 13: Deploying Hardware Breakpoint on Code
-![Step 13](<img width="1680" height="1020" alt="13" src="https://github.com/user-attachments/assets/e7725ecd-aef4-45f2-a7a2-072fb33d5aa9" />
-)
+<img width="1680" height="1020" alt="13" src="https://github.com/user-attachments/assets/e7725ecd-aef4-45f2-a7a2-072fb33d5aa9" />
+
 *Setting breakpoint at sub instruction.*
 
 ### Step 14: Running Payload and Freezing Execution
-![Step 14](<img width="1680" height="1020" alt="14" src="https://github.com/user-attachments/assets/128fb514-2178-4b3e-8880-928170c69e16" />
-)
+<img width="1680" height="1020" alt="14" src="https://github.com/user-attachments/assets/128fb514-2178-4b3e-8880-928170c69e16" />
+
 *Executing code until breakpoint triggers.*
 
 ### Step 15: Evaluating Clock Ticks via EAX
-![Step 15](<img width="1680" height="1020" alt="15" src="https://github.com/user-attachments/assets/75ce6280-e183-486e-b1a3-59f120a362d7" />
-)
+<img width="1680" height="1020" alt="15" src="https://github.com/user-attachments/assets/75ce6280-e183-486e-b1a3-59f120a362d7" />
+
 *Opening register modification hex window.*
 
 ### Step 16: Verifying L1 Cache Hit Metric
-![Step 16](<img width="1680" height="1020" alt="16" src="https://github.com/user-attachments/assets/06bde459-3d7a-4e82-99c7-e14e7e4b6405" />
-)
-)
+<img width="1680" height="1020" alt="16" src="https://github.com/user-attachments/assets/06bde459-3d7a-4e82-99c7-e14e7e4b6405" />
+
 *Confirming precise 28 cycles result.*
